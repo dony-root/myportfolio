@@ -1,0 +1,1477 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — IT Pro</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+  </head>
+
+  <body class="font-sans text-white bg-bg overflow-x-hidden">
+    <!-- NAV -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-[9999] transition-all duration-300"
+      style="
+        background: rgba(5, 8, 16, 0.95);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid #1a2540;
+      "
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a
+          href="#hero"
+          class="font-mono text-sm font-bold text-green tracking-widest flex items-center gap-2"
+        >
+          <span class="text-muted">[</span>
+          <span class="status-dot"></span>
+          <span>root@dony:~$</span>
+          <span class="text-muted">]</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex items-center gap-6 list-none">
+          <li>
+            <a
+              href="#about"
+              class="nav-link font-mono text-xs tracking-widest text-dim hover:text-green transition-colors"
+              >01.about</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="nav-link font-mono text-xs tracking-widest text-dim hover:text-green transition-colors"
+              >02.skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#stack"
+              class="nav-link font-mono text-xs tracking-widest text-dim hover:text-green transition-colors"
+              >03.stack</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="nav-link font-mono text-xs tracking-widest text-dim hover:text-green transition-colors"
+              >04.projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link font-mono text-xs tracking-widest text-dim hover:text-green transition-colors"
+              >05.contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="font-mono text-xs px-4 py-2 rounded border border-green text-green hover:bg-green hover:text-bg transition-all duration-200 tracking-widest"
+            >
+              hire_me()
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button
+          id="ham-btn"
+          class="md:hidden text-green text-xl"
+          onclick="toggleMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden flex-col gap-0 border-t border-border bg-bg2"
+      >
+        <a
+          href="#about"
+          onclick="closeMenu()"
+          class="font-mono text-xs tracking-widest text-dim hover:text-green px-6 py-3 border-b border-border block transition-colors"
+          >01.about</a
+        >
+        <a
+          href="#skills"
+          onclick="closeMenu()"
+          class="font-mono text-xs tracking-widest text-dim hover:text-green px-6 py-3 border-b border-border block transition-colors"
+          >02.skills</a
+        >
+        <a
+          href="#stack"
+          onclick="closeMenu()"
+          class="font-mono text-xs tracking-widest text-dim hover:text-green px-6 py-3 border-b border-border block transition-colors"
+          >03.stack</a
+        >
+        <a
+          href="#projects"
+          onclick="closeMenu()"
+          class="font-mono text-xs tracking-widest text-dim hover:text-green px-6 py-3 border-b border-border block transition-colors"
+          >04.projects</a
+        >
+        <a
+          href="#contact"
+          onclick="closeMenu()"
+          class="font-mono text-xs tracking-widest text-dim hover:text-green px-6 py-3 block transition-colors"
+          >05.contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center grid-bg noise overflow-hidden pt-20"
+    >
+      <!-- Ambient blobs -->
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full pointer-events-none"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(0, 255, 136, 0.06) 0%,
+            transparent 70%
+          );
+          filter: blur(40px);
+        "
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full pointer-events-none"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.08) 0%,
+            transparent 70%
+          );
+          filter: blur(40px);
+        "
+      ></div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left -->
+          <div>
+            <!-- Status badge -->
+            <div
+              class="inline-flex items-center gap-2 font-mono text-xs text-green px-3 py-1.5 rounded-full mb-6"
+              style="
+                border: 1px solid rgba(0, 255, 136, 0.3);
+                background: rgba(0, 255, 136, 0.06);
+              "
+            >
+              <span class="status-dot" style="width: 6px; height: 6px"></span>
+              FREELANCER &nbsp;·&nbsp; LOMBOK TENGAH, ID
+            </div>
+
+            <!-- Name glitch -->
+            <h1
+              class="font-sans font-bold leading-none mb-2"
+              style="font-size: clamp(2.4rem, 6vw, 4.2rem)"
+            >
+              <span class="glitch text-white">DONI HAMDANI</span>
+            </h1>
+
+            <!-- Role -->
+            <div
+              class="font-mono text-green font-bold mb-5"
+              style="
+                font-size: clamp(1rem, 2.5vw, 1.4rem);
+                letter-spacing: 0.04em;
+              "
+            >
+              <span id="typed-role" class="cursor"></span>
+            </div>
+
+            <!-- Divider line -->
+            <div
+              class="w-16 h-0.5 mb-6"
+              style="background: linear-gradient(90deg, #00ff88, transparent)"
+            ></div>
+
+            <p class="text-dim text-sm leading-relaxed mb-8 max-w-lg">
+              IT Support yang menggabungkan keahlian
+              <span class="text-white font-medium">
+                troubleshooting hardware & software
+              </span>
+              dengan kemampuan
+              <span class="text-white font-medium">web development</span>. Siap
+              memberikan solusi teknis end-to-end yang cepat, tepat, dan
+              efisien.
+            </p>
+
+            <!-- CTA -->
+            <div class="flex flex-wrap gap-3 mb-10">
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-green text-bg font-bold text-sm rounded transition-all duration-200 hover:shadow-green"
+                style="
+                  font-family: &quot;JetBrains Mono&quot;, monospace;
+                  letter-spacing: 0.04em;
+                "
+              >
+                <i class="fa-solid fa-folder-open text-xs"></i> view_projects()
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 px-5 py-2.5 border border-muted text-dim text-sm rounded transition-all duration-200 hover:border-green hover:text-green"
+                style="
+                  font-family: &quot;JetBrains Mono&quot;, monospace;
+                  letter-spacing: 0.04em;
+                "
+              >
+                <i class="fa-solid fa-terminal text-xs"></i> contact_me()
+              </a>
+            </div>
+
+            <!-- Quick stats -->
+            <div class="flex gap-6 flex-wrap">
+              <div>
+                <div class="font-mono font-bold text-green text-2xl">5+</div>
+                <div class="text-muted text-xs mt-0.5 tracking-wider">
+                  YRS EXP
+                </div>
+              </div>
+              <div class="w-px bg-border"></div>
+              <div>
+                <div class="font-mono font-bold text-white text-2xl">50+</div>
+                <div class="text-muted text-xs mt-0.5 tracking-wider">
+                  CASES SOLVED
+                </div>
+              </div>
+              <div class="w-px bg-border"></div>
+              <div>
+                <div class="font-mono font-bold text-white text-2xl">3+</div>
+                <div class="text-muted text-xs mt-0.5 tracking-wider">
+                  WEB PROJECTS
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Terminal window -->
+          <div class="animate-float hidden lg:block">
+            <div
+              class="rounded-xl overflow-hidden border border-border shadow-purp"
+              style="
+                background: #0a0f1e;
+                box-shadow:
+                  0 0 40px rgba(124, 58, 237, 0.15),
+                  0 0 80px rgba(0, 255, 136, 0.05);
+              "
+            >
+              <!-- Terminal titlebar -->
+              <div
+                class="flex items-center gap-2 px-4 py-3 border-b border-border"
+                style="background: #080d1a"
+              >
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                <span class="font-mono text-xs text-muted ml-2"
+                  >bash — portfolio@it-dony ~</span
+                >
+              </div>
+              <!-- Terminal body -->
+              <div
+                class="p-5 font-mono text-sm space-y-2"
+                style="min-height: 320px"
+              >
+                <div>
+                  <span class="text-purple">visitor</span
+                  ><span class="text-muted">@it-pro</span
+                  ><span class="text-white">:</span
+                  ><span class="text-green">~$</span>
+                  <span class="text-white">whoami</span>
+                </div>
+                <div class="text-dim pl-4">→ IT Support & Web Developer</div>
+                <div class="mt-2">
+                  <span class="text-purple">visitor</span
+                  ><span class="text-muted">@it-pro</span
+                  ><span class="text-white">:</span
+                  ><span class="text-green">~$</span>
+                  <span class="text-white">run skills.txt</span>
+                </div>
+                <div class="text-dim pl-4 space-y-1">
+                  <div>
+                    <span class="text-green">✔</span> Hardware Troubleshooting
+                  </div>
+                  <div>
+                    <span class="text-green">✔</span> Software & OS Support
+                  </div>
+                  <div>
+                    <span class="text-green">✔</span> Web Dev: HTML · CSS · JS ·
+                    PHP
+                  </div>
+                  <div>
+                    <span class="text-green">✔</span> Network Configuration
+                  </div>
+                  <div><span class="text-green">✔</span> Database: MySQL</div>
+                </div>
+                <div class="mt-2">
+                  <span class="text-purple">visitor</span
+                  ><span class="text-muted">@it-pro</span
+                  ><span class="text-white">:</span
+                  ><span class="text-green">~$</span>
+                  <span class="text-white">ping status</span>
+                </div>
+                <div class="text-dim pl-4">
+                  PING status:
+                  <span class="text-green font-bold">AVAILABLE</span> — 0ms
+                  latency
+                </div>
+                <div class="mt-2 flex items-center gap-1">
+                  <span class="text-purple">visitor</span
+                  ><span class="text-muted">@it-pro</span
+                  ><span class="text-white">:</span
+                  ><span class="text-green">~$</span>
+                  <span
+                    class="inline-block w-2 h-4 ml-1 bg-green animate-blink"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="flex justify-between mt-4 gap-3">
+              <div
+                class="flex-1 rounded-lg px-3 py-2 border border-border flex items-center gap-2"
+                style="background: #0d1424"
+              >
+                <i class="fa-brands fa-php text-purple text-lg"></i>
+                <div>
+                  <div class="text-white text-xs font-bold">PHP Dev</div>
+                  <div class="text-muted text-xs">Backend</div>
+                </div>
+              </div>
+              <div
+                class="flex-1 rounded-lg px-3 py-2 border border-border flex items-center gap-2"
+                style="background: #0d1424"
+              >
+                <i
+                  class="fa-solid fa-screwdriver-wrench text-green text-lg"
+                ></i>
+                <div>
+                  <div class="text-white text-xs font-bold">IT Support</div>
+                  <div class="text-muted text-xs">Hardware</div>
+                </div>
+              </div>
+              <div
+                class="flex-1 rounded-lg px-3 py-2 border border-border flex items-center gap-2"
+                style="background: #0d1424"
+              >
+                <i class="fa-solid fa-network-wired text-green text-lg"></i>
+                <div>
+                  <div class="text-white text-xs font-bold">Network</div>
+                  <div class="text-muted text-xs">LAN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+      >
+        <span class="font-mono text-xs tracking-widest">scroll</span>
+        <i
+          class="fa-solid fa-chevron-down text-xs animate-bounce text-green"
+        ></i>
+      </div>
+    </section>
+
+    <!--  ABOUT -->
+    <section id="about" class="py-24 bg-bg2 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: big visual -->
+          <div class="reveal">
+            <!-- Avatar card -->
+            <div class="relative w-64 mx-auto lg:mx-0">
+              <div
+                class="w-64 h-64 rounded-2xl border-2 flex items-center justify-center text-8xl relative overflow-hidden"
+                style="
+                  border-color: rgba(0, 255, 136, 0.3);
+                  background: #0d1424;
+                  box-shadow: 0 0 40px rgba(0, 255, 136, 0.1);
+                "
+              >
+                <img
+                  src="./assets/img/fotoku.jpg"
+                  alt="Foto Profil"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      rgba(0, 255, 136, 0.05) 0%,
+                      transparent 60%
+                    );
+                  "
+                ></div>
+              </div>
+              <!-- Decoration rings -->
+              <div
+                class="absolute -inset-3 rounded-2xl border border-dashed pointer-events-none"
+                style="border-color: rgba(0, 255, 136, 0.12)"
+              ></div>
+              <div
+                class="absolute -inset-6 rounded-2xl border border-dashed pointer-events-none"
+                style="border-color: rgba(124, 58, 237, 0.08)"
+              ></div>
+              <!-- Status badge -->
+              <div
+                class="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 font-mono text-xs px-4 py-1.5 rounded-full border"
+                style="
+                  background: #0d1424;
+                  border-color: rgba(0, 255, 136, 0.3);
+                  color: #00ff88;
+                "
+              >
+                <span class="status-dot" style="width: 6px; height: 6px"></span>
+                Online — Ready to Work
+              </div>
+            </div>
+
+            <!-- Info chips below avatar -->
+            <div class="mt-10 grid grid-cols-2 gap-3">
+              <div
+                class="rounded-lg p-3 border border-border"
+                style="background: #0d1424"
+              >
+                <div class="text-muted text-xs font-mono mb-1">LOKASI</div>
+                <div
+                  class="text-white text-sm font-medium flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-location-dot text-green text-xs"></i>
+                  Lombok Tengah, ID
+                </div>
+              </div>
+              <div
+                class="rounded-lg p-3 border border-border"
+                style="background: #0d1424"
+              >
+                <div class="text-muted text-xs font-mono mb-1">PENGALAMAN</div>
+                <div
+                  class="text-white text-sm font-medium flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-briefcase text-green text-xs"></i> 5+
+                  Tahun
+                </div>
+              </div>
+              <div
+                class="rounded-lg p-3 border border-border"
+                style="background: #0d1424"
+              >
+                <div class="text-muted text-xs font-mono mb-1">
+                  SPESIALISASI
+                </div>
+                <div
+                  class="text-white text-sm font-medium flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-code text-purple text-xs"></i> IT & Web
+                  Dev
+                </div>
+              </div>
+              <div
+                class="rounded-lg p-3 border border-border"
+                style="background: #0d1424"
+              >
+                <div class="text-muted text-xs font-mono mb-1">STATUS</div>
+                <div
+                  class="text-green text-sm font-medium flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-circle-check text-green text-xs"></i>
+                  Available
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: text -->
+          <div class="reveal">
+            <div class="sec-label mb-2">// 01. tentang saya</div>
+            <h2
+              class="font-bold mb-1 leading-tight"
+              style="font-size: clamp(1.8rem, 4vw, 2.8rem)"
+            >
+              IT Support<br /><span class="text-green">& Web Developer</span>
+            </h2>
+            <div
+              class="w-12 h-0.5 mb-5 mt-3"
+              style="background: linear-gradient(90deg, #00ff88, transparent)"
+            ></div>
+
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Saya adalah IT Support yang berpengalaman dalam menangani berbagai
+              permasalahan teknis, mulai dari
+              <span class="text-white"
+                >troubleshooting hardware dan software</span
+              >, konfigurasi jaringan, hingga instalasi dan pemeliharaan sistem.
+            </p>
+            <p class="text-dim text-sm leading-relaxed mb-6">
+              Di sisi lain, saya juga memiliki kemampuan
+              <span class="text-white">web programming</span> menggunakan HTML,
+              CSS, JS, dan PHP — memungkinkan saya membangun solusi digital yang
+              fungsional sesuai kebutuhan bisnis.
+            </p>
+
+            <!-- Highlight points -->
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-terminal text-green text-xs mt-1 flex-shrink-0"
+                ></i>
+                <span class="text-dim text-sm"
+                  >Diagnosa & perbaikan hardware/software dengan pendekatan
+                  sistematis</span
+                >
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-terminal text-green text-xs mt-1 flex-shrink-0"
+                ></i>
+                <span class="text-dim text-sm"
+                  >Membangun website dinamis dengan PHP & MySQL yang ringan dan
+                  cepat</span
+                >
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-terminal text-green text-xs mt-1 flex-shrink-0"
+                ></i>
+                <span class="text-dim text-sm"
+                  >Konfigurasi & pengelolaan jaringan LAN untuk lingkungan
+                  kantor</span
+                >
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-terminal text-green text-xs mt-1 flex-shrink-0"
+                ></i>
+                <span class="text-dim text-sm"
+                  >Respon cepat — orientasi pada solusi, bukan sekadar perbaikan
+                  sementara</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 font-mono text-sm text-green border border-green px-5 py-2.5 rounded hover:bg-green hover:text-bg transition-all duration-200"
+            >
+              <i class="fa-solid fa-paper-plane text-xs"></i> Hubungi Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-bg relative grid-bg">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-14 reveal">
+          <div class="sec-label mb-2">// 02. keahlian</div>
+          <h2 class="font-bold" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+            Apa yang Saya <span class="text-green">Kuasai</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Card 1 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(0, 255, 136, 0.08);
+                border: 1px solid rgba(0, 255, 136, 0.2);
+              "
+            >
+              <i class="fa-solid fa-microchip text-green text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              Hardware Troubleshooting
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Diagnosa dan perbaikan PC, laptop, printer, RAM, HDD/SSD,
+              motherboard, dan berbagai periferal.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-green font-mono">90%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full bg-green"
+                  style="width: 0%"
+                  data-w="90%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">PC Repair</span><span class="tag">Laptop</span
+              ><span class="tag">Printer</span><span class="tag">RAM/SSD</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(0, 255, 136, 0.08);
+                border: 1px solid rgba(0, 255, 136, 0.2);
+              "
+            >
+              <i class="fa-solid fa-display text-green text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              Software & OS Support
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Instalasi, konfigurasi, dan troubleshooting OS Windows, driver,
+              antivirus, serta aplikasi bisnis.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-green font-mono">92%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full bg-green"
+                  style="width: 0%"
+                  data-w="92%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">Windows</span>
+              <span class="tag">Driver</span><span class="tag">Antivirus</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(124, 58, 237, 0.1);
+                border: 1px solid rgba(124, 58, 237, 0.25);
+              "
+            >
+              <i class="fa-solid fa-code text-purple text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              Web Programming
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Membangun website responsif dan aplikasi web dinamis menggunakan
+              HTML, CSS, JS, dan PHP dengan database MySQL.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-purple font-mono">85%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full"
+                  style="width: 0%; background: #7c3aed"
+                  data-w="85%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JS</span><span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(0, 255, 136, 0.08);
+                border: 1px solid rgba(0, 255, 136, 0.2);
+              "
+            >
+              <i class="fa-solid fa-headset text-green text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              IT Support & Help Desk
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Layanan dukungan teknis langsung maupun remote, manajemen tiket,
+              dokumentasi sistem dan SOP.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-green font-mono">95%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full bg-green"
+                  style="width: 0%"
+                  data-w="95%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">Remote Support</span
+              ><span class="tag">Ticketing</span><span class="tag">SLA</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(0, 255, 136, 0.08);
+                border: 1px solid rgba(0, 255, 136, 0.2);
+              "
+            >
+              <i class="fa-solid fa-network-wired text-green text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              Jaringan & Infrastruktur
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Konfigurasi router, switch, LAN, dan penanganan konektivitas
+              internet serta keamanan jaringan dasar.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-green font-mono">80%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full bg-green"
+                  style="width: 0%"
+                  data-w="80%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">LAN</span><span class="tag">Router</span
+              ><span class="tag">TCP/IP</span><span class="tag">WiFi</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="card-hover reveal rounded-xl p-6 border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              style="
+                background: rgba(124, 58, 237, 0.1);
+                border: 1px solid rgba(124, 58, 237, 0.25);
+              "
+            >
+              <i class="fa-solid fa-database text-purple text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white mb-2 tracking-wide">
+              Database & Server
+            </h3>
+            <p class="text-dim text-sm leading-relaxed mb-4">
+              Pengelolaan database MySQL, konfigurasi web server Apache,
+              pengelolaan hosting dan deployment.
+            </p>
+            <div class="mb-4">
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-muted font-mono">Proficiency</span
+                ><span class="text-xs text-purple font-mono">82%</span>
+              </div>
+              <div class="h-1 rounded-full bg-border overflow-hidden">
+                <div
+                  class="bar-fill h-full rounded-full"
+                  style="width: 0%; background: #7c3aed"
+                  data-w="82%"
+                ></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="tag">MySQL</span><span class="tag">Apache</span
+              ><span class="tag">cPanel</span><span class="tag">XAMPP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  TECH STACK -->
+    <section id="stack" class="py-24 bg-bg2">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-14 reveal">
+          <div class="sec-label mb-2">// 03. tech stack</div>
+          <h2 class="font-bold" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+            Tools & <span class="text-green">Teknologi</span>
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 reveal"
+        >
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-brands fa-html5 text-3xl" style="color: #e44d26"></i>
+            <span class="font-mono text-xs text-muted">HTML5</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i
+              class="fa-brands fa-css3-alt text-3xl"
+              style="color: #1572b6"
+            ></i>
+            <span class="font-mono text-xs text-muted">CSS3</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-brands fa-php text-3xl" style="color: #8892bf"></i>
+            <span class="font-mono text-xs text-muted">PHP</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-solid fa-database text-3xl text-green"></i>
+            <span class="font-mono text-xs text-muted">MySQL</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i
+              class="fa-brands fa-bootstrap text-3xl"
+              style="color: #7952b3"
+            ></i>
+            <span class="font-mono text-xs text-muted">Bootstrap</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-brands fa-laravel text-3xl text-white"></i>
+            <span class="font-mono text-xs text-muted">Laravel</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-brands fa-windows text-3xl" style="color: #00adef"></i>
+            <span class="font-mono text-xs text-muted">Windows</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-solid fa-server text-3xl text-purple"></i>
+            <span class="font-mono text-xs text-muted">Apache</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-solid fa-network-wired text-3xl text-green"></i>
+            <span class="font-mono text-xs text-muted">LAN</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-solid fa-code text-3xl text-green"></i>
+            <span class="font-mono text-xs text-muted">VS Code</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-brands fa-github text-3xl"></i>
+            <span class="font-mono text-xs text-muted">Github</span>
+          </div>
+          <div
+            class="card-hover rounded-xl p-4 border border-border flex flex-col items-center gap-2 text-center"
+            style="background: #0d1424"
+          >
+            <i class="fa-solid fa-globe text-3xl text-green"></i>
+            <span class="font-mono text-xs text-muted">cPanel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  PROJECTS -->
+    <section id="projects" class="py-24 bg-bg grid-bg">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-14 reveal">
+          <div class="sec-label mb-2">// 04. proyek</div>
+          <h2 class="font-bold" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+            Proyek <span class="text-green">Pilihan</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Project 1 -->
+          <div
+            class="card-hover reveal rounded-xl overflow-hidden border border-border"
+            style="background: #0d1424"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative overflow-hidden"
+              style="
+                background: linear-gradient(135deg, #0d1424 0%, #1a2540 100%);
+              "
+            >
+              <img
+                src="./assets/img/projek.png"
+                alt="Foto Profil"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/60"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400/60"></span>
+              </div>
+              <div
+                class="absolute top-3 right-3 font-mono text-xs text-muted px-2 py-0.5 rounded border border-border bg-bg"
+              >
+                v1.0
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="sec-label text-xs mb-2">
+                Laravel · Tailwind CSS · Alpine.js · Sweetalert2 · Responsive
+              </div>
+              <h3 class="font-bold text-white mb-2">
+                SewaTenda: Full-Stack Rental Management System & Custom CMS
+              </h3>
+              <p class="text-dim text-sm leading-relaxed mb-4">
+                Aplikasi penyewaan alat outdoor dan CMS berbasis web. Fitur:
+                manajemen konten dinamis, katalog peralatan, dan pengelolaan
+                pengguna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  CONTACT -->
+    <section id="contact" class="py-24 bg-bg2">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-14 reveal text-center">
+          <div class="sec-label mb-2">// 05. kontak</div>
+          <h2
+            class="font-bold mb-3"
+            style="font-size: clamp(1.8rem, 4vw, 2.6rem)"
+          >
+            Mari <span class="text-green">Terhubung</span>
+          </h2>
+          <p class="text-dim text-sm max-w-md mx-auto">
+            Butuh IT support, mau bikin website, atau sekedar diskusi teknis?
+            Hubungi saya sekarang.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+          <!-- Left: contact info -->
+          <div class="reveal space-y-4">
+            <a
+              href="https://mail.google.com/mail/"
+              class="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-green/40 transition-all card-hover group"
+              style="background: #0d1424"
+            >
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                style="
+                  background: rgba(0, 255, 136, 0.08);
+                  border: 1px solid rgba(0, 255, 136, 0.2);
+                "
+              >
+                <i class="fa-solid fa-envelope text-green"></i>
+              </div>
+              <div>
+                <div class="font-mono text-xs text-muted mb-0.5">EMAIL</div>
+                <div
+                  class="text-white text-sm font-medium group-hover:text-green transition-colors"
+                >
+                  donidhamdani@gmail.com
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-right text-muted ml-auto group-hover:text-green group-hover:translate-x-1 transition-all text-xs"
+              ></i>
+            </a>
+
+            <a
+              href="https://wa.me/6281999647097"
+              class="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-green/40 transition-all card-hover group"
+              style="background: #0d1424"
+            >
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                style="
+                  background: rgba(0, 255, 136, 0.08);
+                  border: 1px solid rgba(0, 255, 136, 0.2);
+                "
+              >
+                <i class="fa-brands fa-whatsapp text-green text-xl"></i>
+              </div>
+              <div>
+                <div class="font-mono text-xs text-muted mb-0.5">WHATSAPP</div>
+                <div
+                  class="text-white text-sm font-medium group-hover:text-green transition-colors"
+                >
+                  +62 819-9964-7097
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-right text-muted ml-auto group-hover:text-green group-hover:translate-x-1 transition-all text-xs"
+              ></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/donidblank"
+              class="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-green/40 transition-all card-hover group"
+              style="background: #0d1424"
+            >
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                style="
+                  background: rgba(0, 255, 136, 0.08);
+                  border: 1px solid rgba(0, 255, 136, 0.2);
+                "
+              >
+                <i class="fa-brands fa-instagram text-green"></i>
+              </div>
+              <div>
+                <div class="font-mono text-xs text-muted mb-0.5">INSTAGRAM</div>
+                <div
+                  class="text-white text-sm font-medium group-hover:text-green transition-colors"
+                >
+                  instagram.com/donidblank
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-right text-muted ml-auto group-hover:text-green group-hover:translate-x-1 transition-all text-xs"
+              ></i>
+            </a>
+
+            <a
+              href="https://github.com/dony-root"
+              class="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-green/40 transition-all card-hover group"
+              style="background: #0d1424"
+            >
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                style="
+                  background: rgba(0, 255, 136, 0.08);
+                  border: 1px solid rgba(0, 255, 136, 0.2);
+                "
+              >
+                <i class="fa-brands fa-github text-green"></i>
+              </div>
+              <div>
+                <div class="font-mono text-xs text-muted mb-0.5">GITHUB</div>
+                <div
+                  class="text-white text-sm font-medium group-hover:text-green transition-colors"
+                >
+                  github.com/dony-root
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-right text-muted ml-auto group-hover:text-green group-hover:translate-x-1 transition-all text-xs"
+              ></i>
+            </a>
+
+            <!-- Availability card -->
+            <div
+              class="p-4 rounded-xl border border-green/20"
+              style="background: rgba(0, 255, 136, 0.04)"
+            >
+              <div class="flex items-center gap-3">
+                <span class="status-dot"></span>
+                <div>
+                  <div class="text-white text-sm font-medium">Freelancer</div>
+                  <div class="text-muted text-xs font-mono mt-0.5">
+                    Only weekend
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="reveal">
+            <div
+              class="rounded-xl border border-border p-6"
+              style="background: #0d1424"
+            >
+              <div class="font-mono text-xs text-muted mb-5">
+                // php_artisan_()
+              </div>
+
+              <div class="space-y-5">
+                <!-- Kategori: Frontend -->
+                <div>
+                  <label class="font-mono text-xs text-muted block mb-2"
+                    >FRONTEND</label
+                  >
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      Tailwind CSS
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      Alpine.js
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      JavaScript (ES6)
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      HTML5 & CSS3
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Kategori: Backend & Database -->
+                <div>
+                  <label class="font-mono text-xs text-muted block mb-2 mt-2"
+                    >BACKEND & DB</label
+                  >
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      Laravel
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      PHP
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      MySQL
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Kategori: Tools & Lainnya -->
+                <div>
+                  <label class="font-mono text-xs text-muted block mb-2 mt-2"
+                    >TOOLS</label
+                  >
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      Git & GitHub
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      Composer
+                    </span>
+                    <span
+                      class="px-3 py-1.5 rounded-md border text-xs font-sans transition-colors cursor-default"
+                      style="
+                        background: #080d1a;
+                        border-color: #1a2540;
+                        color: #e8f0fe;
+                      "
+                      onmouseover="
+                        this.style.borderColor = 'rgba(0,255,136,0.4)'
+                      "
+                      onmouseout="this.style.borderColor = '#1a2540'"
+                    >
+                      NPM
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  FOOTER -->
+    <footer class="bg-bg border-t" style="border-color: #1a2540">
+      <div
+        class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <div class="font-mono text-xs text-muted">
+          <span class="text-green">©</span> 2026 Doni Hamdani · Built with HTML,
+          Tailwind CSS & ❤️
+        </div>
+        <div class="font-mono text-xs text-muted flex items-center gap-2">
+          <span class="status-dot" style="width: 6px; height: 6px"></span>
+          All systems operational
+        </div>
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="text-muted hover:text-green transition-colors text-sm"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="#"
+            class="text-muted hover:text-green transition-colors text-sm"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="#"
+            class="text-muted hover:text-green transition-colors text-sm"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ─── Typing animation
+      const roles = [
+        "IT Support Specialist",
+        "Hardware Troubleshooter",
+        "Software Problem Solver",
+        "Web Developer (PHP/HTML/CSS/JS)",
+        "Network Configurator",
+      ];
+      let ri = 0,
+        ci = 0,
+        del = false;
+      const typedEl = document.getElementById("typed-role");
+      function type() {
+        const r = roles[ri];
+        typedEl.textContent = del ? r.slice(0, ci - 1) : r.slice(0, ci + 1);
+        del ? ci-- : ci++;
+        if (!del && ci === r.length) {
+          del = true;
+          setTimeout(type, 2200);
+          return;
+        }
+        if (del && ci === 0) {
+          del = false;
+          ri = (ri + 1) % roles.length;
+          setTimeout(type, 400);
+          return;
+        }
+        setTimeout(type, del ? 40 : 80);
+      }
+      type();
+
+      // ─── Mobile menu
+      function toggleMenu() {
+        const m = document.getElementById("mobile-menu");
+        m.classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mobile-menu").classList.remove("open");
+      }
+
+      // ─── Auto close mobile menu when resized to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          document.getElementById("mobile-menu").classList.remove("open");
+        }
+      });
+
+      // ─── Scroll reveal
+      const revEls = document.querySelectorAll(".reveal");
+      const revObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              // animate skill bars
+              e.target.querySelectorAll(".bar-fill").forEach((b) => {
+                b.style.width = b.dataset.w;
+              });
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      revEls.forEach((r) => revObs.observe(r));
+
+      // ─── Also observe skill bars not inside reveal
+      document.querySelectorAll(".bar-fill").forEach((b) => {
+        const obs2 = new IntersectionObserver(
+          (entries) => {
+            if (entries[0].isIntersecting) b.style.width = b.dataset.w;
+          },
+          { threshold: 0.5 },
+        );
+        obs2.observe(b);
+      });
+
+      // ─── Active nav on scroll
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const navObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((a) => a.classList.remove("active"));
+              const a = document.querySelector(
+                `.nav-link[href="#${entry.target.id}"]`,
+              );
+              if (a) a.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      sections.forEach((s) => navObs.observe(s));
+
+      // ─── Send message
+      function sendMsg() {
+        const btn = event.currentTarget;
+        btn.innerHTML =
+          '<i class="fa-solid fa-circle-check"></i> Message Sent!';
+        btn.style.background = "#00cc6a";
+        setTimeout(() => {
+          btn.innerHTML =
+            '<i class="fa-solid fa-paper-plane text-xs"></i> send_message()';
+          btn.style.background = "";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
